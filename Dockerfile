@@ -52,6 +52,5 @@ RUN apk upgrade --no-cache \
 COPY settings.yml searx/settings.yml
 
 RUN /usr/bin/python3 -m compileall -q searx; \
- && find /usr/local/searx/searx/static -a \( -name '*.html' -o -name '*.css' -o -name '*.js' \
-        -o -name '*.svg' -o -name '*.ttf' -o -name '*.eot' \) \
-        -type f -exec gzip -9 -k {} \+ -exec brotli --best {} \+
+find /usr/local/searx/searx/static -a \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.svg' -o -name '*.ttf' -o -name '*.eot' \) \
+-type f -exec gzip -9 -k {} \+ -exec brotli --best {} \+

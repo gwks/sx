@@ -7,7 +7,7 @@ VOLUME /var/log/uwsgi
 ENV INSTANCE_NAME=searx \
     SEARX_SETTINGS_PATH=/etc/searx/settings.yml \
     UWSGI_SETTINGS_PATH=/etc/searx/uwsgi.ini \
-UPSTREAM_COMMIT=276ffd3f01cdd823f75676c51231fad4040059d3
+UPSTREAM_COMMIT=00abe3df3857f70875543e766223bc7bc0ccce93
 
 WORKDIR /usr/local/searx
 
